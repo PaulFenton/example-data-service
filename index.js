@@ -1,7 +1,7 @@
 const express = require('express')
 var fs = require('fs');
 const app = express()
-const port = 3000
+const port = 8080  // 8080 required for Azure monitoring
 
 // read static .json file into memory for the lifetime of the app
 var states = JSON.parse(fs.readFileSync('./states.json', 'utf8'));
@@ -14,5 +14,5 @@ app.get('/states', (req, res) => {
     res.send(states);
 });
 
-var msg = `Example app listening at http://localhost:${port}`;
+var msg = `Example data service started!`;
 app.listen(port, () => console.log(msg))
