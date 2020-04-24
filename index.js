@@ -14,5 +14,4 @@ app.get('/states', (req, res) => {
     res.send(states);
 });
 
-var msg = `Example data service started!`;
-app.listen(port, () => console.log(msg))
+app.listen(port, () => console.log(`Example data service started!`))
