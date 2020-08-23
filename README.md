@@ -14,7 +14,11 @@ ng run start
 ng run dev
 ```
 
-NOTE: If using Linux or Mac for development, run manually or undate the 'start' script in package.json to the following command:
+NOTE: If using Linux or Mac for development, run manually or update the 'start' script in package.json to the following command:
 ```
-NODE_ENV=production node index.js
+  "scripts": {
+    ...
+    "dev": "NODE_ENV=development node index.js",
+    ...
+  }
 ```
